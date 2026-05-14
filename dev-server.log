@@ -1,0 +1,26 @@
+
+> tailwind@1.0.0 dev
+> concurrently -k "npm:tw:watch" "npm:serve"
+
+[tw:watch] 
+[tw:watch] > tailwind@1.0.0 tw:watch
+[tw:watch] > tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+[tw:watch] 
+[serve] 
+[serve] > tailwind@1.0.0 serve
+[serve] > browser-sync start --server --files "./index.html, ./dist/output.css" --no-open --port 3000
+[serve] 
+[tw:watch] [3m[1m[34m≈[39m[22m[23m tailwindcss [34mv4.3.0[39m
+[tw:watch] 
+[tw:watch] Done in [34m66ms[39m
+[serve] [Browsersync] Access URLs:
+[serve]  --------------------------------------
+[serve]        Local: http://localhost:3000
+[serve]     External: http://192.168.1.156:3000
+[serve]  --------------------------------------
+[serve]           UI: http://localhost:3001
+[serve]  UI External: http://192.168.1.156:3001
+[serve]  --------------------------------------
+[serve] [Browsersync] Serving files from: ./
+[serve] [Browsersync] Watching files...
+[tw:watch] Done in [32m8ms[39m
