@@ -1,0 +1,23 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "tw:watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "serve": "browser-sync start --server --files \"./index.html, ./dist/output.css\" --no-open --port 3000",
+    "dev": "concurrently -k \"npm:tw:watch\" \"npm:serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "browser-sync": "^3.0.3",
+    "concurrently": "^9.1.2",
+    "tailwindcss": "^4.3.0"
+  }
+}
